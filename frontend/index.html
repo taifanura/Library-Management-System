@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advanced Multi-Library Management System">
+    <title>Advanced Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">📚</div>
+                <div>
+                    <h2>LibraryHub</h2>
+                    <span>Management System</span>
+                </div>
+            </div>
+
+            <div class="menu-title">MAIN MENU</div>
+
+            <nav class="navigation">
+                <a href="#dashboard" class="nav-link active">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="#libraries" class="nav-link">
+                    <span>🏛</span> Libraries
+                </a>
+
+                <a href="#books" class="nav-link">
+                    <span>📖</span> Book Catalogue
+                </a>
+
+                <a href="#inventory" class="nav-link">
+                    <span>📦</span> Inventory
+                </a>
+
+                <a href="#search" class="nav-link">
+                    <span>🔍</span> Search Books
+                </a>
+            </nav>
+
+            <div class="menu-title">ACCOUNT</div>
+
+            <nav class="navigation">
+                <a href="#admin" class="nav-link">
+                    <span>👤</span> Admin Profile
+                </a>
+
+                <a href="#footer" class="nav-link">
+                    <span>⚙</span> Settings
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="admin-mini">
+                    <div class="avatar">A</div>
+                    <div>
+                        <h4>Administrator</h4>
+                        <span>System Admin</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+                <div>
+                    <h2>Dashboard</h2>
+                    <p>Welcome to Advanced Library Management System</p>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="admin-status">● Admin Panel</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+
+            <!-- Dashboard -->
+            <section id="dashboard" class="content-section">
+
+                <div class="welcome-banner">
+                    <div>
+                        <h1>Welcome to LibraryHub! 👋</h1>
+                        <p>
+                            Manage multiple libraries, books, inventory
+                            and availability from one platform.
+                        </p>
+                    </div>
+                    <div class="banner-icon">📚</div>
+                </div>
+
+                <!-- Statistics -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue">🏛</div>
+                        <div>
+                            <p>Total Libraries</p>
+                            <h2 id="totalLibraries">3</h2>
+                            <span>Registered libraries</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">📚</div>
+                        <div>
+                            <p>Total Book Titles</p>
+                            <h2 id="totalBooks">4</h2>
+                            <span>Registered titles</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">✓</div>
+                        <div>
+                            <p>Available Copies</p>
+                            <h2 id="availableCopies">36</h2>
+                            <span>Across all libraries</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">📦</div>
+                        <div>
+                            <p>Total Copies</p>
+                            <h2 id="totalCopies">63</h2>
+                            <span>Across all libraries</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Search Section -->
+            <section id="search" class="section-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Search Across Libraries</h2>
+                        <p>Find books from all registered libraries</p>
+                    </div>
+                    <span class="section-icon">🔍</span>
+                </div>
+
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by title, author, ISBN, book code or category..."
+                        aria-label="Search books"
+                    >
+
+                    <button type="button" id="searchButton">
+                        Search Books
+                    </button>
+                </div>
+
+                <div class="search-hint">
+                    Search by Book Title | Author | ISBN | Book Code | Category
+                </div>
+
+            </section>
+
+            <!-- Library Section -->
+            <section id="libraries" class="section-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Registered Libraries</h2>
+                        <p>Library information and locations</p>
+                    </div>
+                    <span class="count-badge">3 Libraries</span>
+                </div>
+
+                <div class="library-grid">
+
+                    <div class="library-card">
+                        <div class="library-symbol">🏛</div>
+                        <h3>Central Library</h3>
+                        <p>📍 Zindabazar, Sylhet</p>
+                        <p>☎ 01711111111</p>
+                        <span class="status available">Registered</span>
+                    </div>
+
+                    <div class="library-card">
+                        <div class="library-symbol">🏛</div>
+                        <h3>City Library</h3>
+                        <p>📍 Ambarkhana, Sylhet</p>
+                        <p>☎ 01722222222</p>
+                        <span class="status available">Registered</span>
+                    </div>
+
+                    <div class="library-card">
+                        <div class="library-symbol">🏛</div>
+                        <h3>Knowledge Library</h3>
+                        <p>📍 Subidbazar, Sylhet</p>
+                        <p>☎ 01733333333</p>
+                        <span class="status available">Registered</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Book Catalogue -->
+            <section id="books" class="section-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Book Catalogue</h2>
+                        <p>Books available across registered libraries</p>
+                    </div>
+                    <span class="count-badge">4 Book Titles</span>
+                </div>
+
+                <div class="table-container">
+                    <table id="bookTable">
+
+                        <thead>
+                            <tr>
+                                <th>Book Information</th>
+                                <th>Author</th>
+                                <th>Category</th>
+                                <th>Library</th>
+                                <th>Available</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <strong>Introduction to Algorithms</strong>
+                                    <small>BK101 | ISBN: 9780262046305</small>
+                                </td>
+                                <td>Thomas H. Cormen</td>
+                                <td>Computer Science</td>
+                                <td>Central Library</td>
+                                <td>7 / 10</td>
+                                <td>৳850</td>
+                                <td><span class="status available">Available</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Database System Concepts</strong>
+                                    <small>BK102 | ISBN: 9780078022159</small>
+                                </td>
+                                <td>Abraham Silberschatz</td>
+                                <td>Database</td>
+                                <td>Central Library</td>
+                                <td>5 / 8</td>
+                                <td>৳750</td>
+                                <td><span class="status available">Available</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Clean Code</strong>
+                                    <small>BK103 | ISBN: 9780132350884</small>
+                                </td>
+                                <td>Robert C. Martin</td>
+                                <td>Programming</td>
+                                <td>City Library</td>
+                                <td>8 / 10</td>
+                                <td>৳700</td>
+                                <td><span class="status available">Available</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Java: The Complete Reference</strong>
+                                    <small>BK104 | ISBN: 9781260440232</small>
+                                </td>
+                                <td>Herbert Schildt</td>
+                                <td>Programming</td>
+                                <td>Knowledge Library</td>
+                                <td>2 / 5</td>
+                                <td>৳820</td>
+                                <td><span class="status low">Low Stock</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Introduction to Algorithms</strong>
+                                    <small>BK101 | ISBN: 9780262046305</small>
+                                </td>
+                                <td>Thomas H. Cormen</td>
+                                <td>Computer Science</td>
+                                <td>City Library</td>
+                                <td>4 / 6</td>
+                                <td>৳900</td>
+                                <td><span class="status available">Available</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Database System Concepts</strong>
+                                    <small>BK102 | ISBN: 9780078022159</small>
+                                </td>
+                                <td>Abraham Silberschatz</td>
+                                <td>Database</td>
+                                <td>Knowledge Library</td>
+                                <td>10 / 12</td>
+                                <td>৳780</td>
+                                <td><span class="status available">Available</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Clean Code</strong>
+                                    <small>BK103 | ISBN: 9780132350884</small>
+                                </td>
+                                <td>Robert C. Martin</td>
+                                <td>Programming</td>
+                                <td>Central Library</td>
+                                <td>3 / 5</td>
+                                <td>৳650</td>
+                                <td><span class="status available">Available</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <strong>Java: The Complete Reference</strong>
+                                    <small>BK104 | ISBN: 9781260440232</small>
+                                </td>
+                                <td>Herbert Schildt</td>
+                                <td>Programming</td>
+                                <td>City Library</td>
+                                <td>5 / 7</td>
+                                <td>৳800</td>
+                                <td><span class="status available">Available</span></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <p id="noResults" class="no-results" hidden>
+                    No matching books found.
+                </p>
+
+                <p class="price-note">
+                    Note: Displayed prices are listed book prices,
+                    not necessarily borrowing fees.
+                </p>
+
+            </section>
+
+            <!-- Inventory Section -->
+            <section id="inventory" class="section-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Inventory Overview</h2>
+                        <p>Book quantity and availability information</p>
+                    </div>
+                </div>
+
+                <div class="inventory-info">
+                    <div>
+                        <span class="inventory-dot green-dot"></span>
+                        <strong>Available Copies</strong>
+                        <p>36 books are currently available.</p>
+                    </div>
+
+                    <div>
+                        <span class="inventory-dot orange-dot"></span>
+                        <strong>Unavailable Copies</strong>
+                        <p>27 books are currently unavailable.</p>
+                    </div>
+                </div>
+
+                <p class="inventory-note">
+                    Inventory information is based on the sample
+                    records. Actual quantities will be updated
+                    through the administrator panel after backend
+                    integration.
+                </p>
+
+            </section>
+
+            <!-- Admin Profile -->
+            <section id="admin" class="section-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Administrator Information</h2>
+                        <p>Authorized system management</p>
+                    </div>
+                </div>
+
+                <div class="admin-profile">
+                    <div class="avatar large-avatar">A</div>
+                    <div>
+                        <h3>Administrator</h3>
+                        <p>System Administrator</p>
+                        <span class="status available">Authorized Role</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer" class="footer">
+                <p>
+                    © 2026 Advanced Multi-Library Management System.
+                    All Rights Reserved.
+                </p>
+                <span>Developed with Java, HTML, CSS and MySQL</span>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <!-- Search Functionality -->
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+        const bookTable = document.getElementById("bookTable");
+        const noResults = document.getElementById("noResults");
+
+        function searchBooks() {
+            const keyword = searchInput.value.trim().toLowerCase();
+            const rows = bookTable.querySelectorAll("tbody tr");
+
+            let visibleCount = 0;
+
+            rows.forEach(function(row) {
+                const bookInformation = row.cells[0].innerText;
+                const author = row.cells[1].innerText;
+                const category = row.cells[2].innerText;
+                const library = row.cells[3].innerText;
+
+                const searchableText = (
+                    bookInformation + " " +
+                    author + " " +
+                    category + " " +
+                    library
+                ).toLowerCase();
+
+                const matches = searchableText.includes(keyword);
+
+                row.style.display = matches ? "" : "none";
+
+                if (matches) {
+                    visibleCount++;
+                }
+            });
+
+            noResults.hidden = visibleCount !== 0;
+        }
+
+        searchButton.addEventListener("click", searchBooks);
+
+        searchInput.addEventListener("input", searchBooks);
+
+        searchInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                searchBooks();
+            }
+        });
+    </script>
+
+</body>
+</html>
