@@ -5,7 +5,7 @@ import java.util.List;
 
 public class LibraryDAO {
 
-    // Add a new library
+    
     public boolean addLibrary(Library library) throws SQLException {
 
         String sql = "INSERT INTO libraries " +
@@ -26,7 +26,7 @@ public class LibraryDAO {
         }
     }
 
-    // View all libraries
+    
     public List<Library> getAllLibraries() throws SQLException {
 
         List<Library> libraries = new ArrayList<>();
@@ -56,7 +56,7 @@ public class LibraryDAO {
         return libraries;
     }
 
-    // Find library by ID
+   
     public Library getLibraryById(int libraryId) throws SQLException {
 
         String sql = "SELECT * FROM libraries WHERE library_id = ?";
@@ -86,7 +86,7 @@ public class LibraryDAO {
         return null;
     }
 
-    // Update library information
+   
     public boolean updateLibrary(Library library) throws SQLException {
 
         String sql = "UPDATE libraries SET " +
@@ -109,7 +109,7 @@ public class LibraryDAO {
         }
     }
 
-    // Delete library
+    
     public boolean deleteLibrary(int libraryId) throws SQLException {
 
         String sql = "DELETE FROM libraries WHERE library_id = ?";
